@@ -1,15 +1,144 @@
-.paddin{
+html, body{
+    margin: 0px;
+    padding: 0;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    height:100%;
-    background-color: dodgerblue;
+    background-color: #9e0fbe;
 }
 
-ion-item{
+.login-content {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    padding:20px;
+    height: 100vh;
+    width: 100%;
+    background-color: #3f8ad5; /* Soft background color */
+  }
+  
+  .login-box {
+    width: 400px;
+    padding: 40px;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 15px;
+    padding-top: 90px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Softer shadow for modern look */
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .login-box:hover {
+    padding-right: 30px;
+    transform: translateY(-5px); /* Slight hover effect */
+  }
+  
+  .logo {
+    margin-bottom: 20px;
+  }
+  
+  .login-header {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333; /* Darker font color */
+    margin-bottom: 10px;
+  }
+  
+  .login-subheader {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 25px;
+  }
+  
+  /* Social buttons */
+  .socials {
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    border-radius: 8px;
+    font-weight: 600;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .socials:hover {
+    background-color: #f1f1f1; /* Subtle hover effect */
+  }
+  
+  .or-text {
+    font-size: 14px;
+    color: #777;
+    margin: 20px 0;
+  }
+  
+  /* Input fields */
+  ion-item {
     background: transparent;
-}
-
-ion-button{
-    background-color: lightgreen;
-}
+    text-align: left;
+    margin-bottom: 15px;
+  }
+  
+  ion-input {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  /* Remember me and forgot password options */
+  .options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .remember-me, .forgot-password {
+    font-size: 13px;
+    color: #555;
+    cursor: pointer;
+  }
+  
+  .forgot-password:hover {
+    text-decoration: underline;
+    color: #a445b2; /* Color match with create account link */
+  }
+  
+  /* Button styling */
+  .login-btn {
+    background: linear-gradient(135deg, #a445b2, #d41872); /* Gradient background */
+    color: white;
+    font-weight: 600;
+    padding: 12px;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+    width: 100%;
+  }
+  
+  .login-btn:hover {
+    background: linear-gradient(135deg, #7a308e, #d41872); /* Darker on hover */
+    transform: translateY(-3px); /* Subtle lift effect */
+  }
+  
+  /* Create account link */
+  .create-account {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #777;
+  }
+  
+  .create-account a {
+    color: #a445b2;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .create-account a:hover {
+    text-decoration: underline;
+    color: #d41872;
+  }
+  
