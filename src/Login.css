@@ -1,35 +1,108 @@
-html, body{
-    margin: 0px;
-    padding: 0;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #9e0fbe;
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #3b8bba, #6f42c1); /* Gradient background */
+  overflow: hidden; /* Prevent scrolling */
 }
 
 .login-content {
-    display: flex;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    padding:20px;
-    height: 100vh;
-    width: 100%;
-    background-color: #3f8ad5; /* Soft background color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: 2; /* Make sure it's above background bubbles */
+}
+
+.login-box {
+  width: 400px;
+  padding: 40px;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); 
+  z-index: 3; /* Above the background bubbles */
+  transition: transform 0.3s ease-in-out;
+}
+
+.bubbles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1; /* Behind the login box */
+}
+
+.bubble {
+  position: absolute;
+  bottom: -50px;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  animation: rise 8s infinite ease-in-out;
+}
+
+/* Positioning for bubbles without inline styles */
+.bubble:nth-child(1) {
+  left: 10%;
+  width: 60px;
+  height: 60px;
+  animation-duration: 9s;
+}
+
+.bubble:nth-child(2) {
+  left: 25%;
+  width: 40px;
+  height: 40px;
+  animation-duration: 7s;
+}
+
+.bubble:nth-child(3) {
+  left: 40%;
+  width: 50px;
+  height: 50px;
+  animation-duration: 8s;
+}
+
+.bubble:nth-child(4) {
+  left: 55%;
+  width: 70px;
+  height: 70px;
+  animation-duration: 10s;
+}
+
+.bubble:nth-child(5) {
+  left: 70%;
+  width: 50px;
+  height: 50px;
+  animation-duration: 6s;
+}
+
+.bubble:nth-child(6) {
+  left: 85%;
+  width: 40px;
+  height: 40px;
+  animation-duration: 7s;
+}
+
+@keyframes rise {
+  0% {
+      transform: translateY(0) scale(1);
   }
-  
-  .login-box {
-    width: 400px;
-    padding: 40px;
-    text-align: center;
-    background: #ffffff;
-    border-radius: 15px;
-    padding-top: 90px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Softer shadow for modern look */
-    transition: transform 0.3s ease-in-out;
+  100% {
+      transform: translateY(-110vh) scale(1.5);
   }
-  
+}
+
+
   .login-box:hover {
     padding-right: 30px;
     transform: translateY(-5px); /* Slight hover effect */
