@@ -44,14 +44,13 @@ const Login: React.FC = () => {
         setAlertMessage("Invalid username or password.");
         setShowAlert(true);
       }
-      setLoading(false); // End loading
-    }, 1500); // Simulate a delay for login (1.5s)
+      setLoading(false); 
+    }, 1500);
   };
 
   return (
     <IonPage>
       <IonContent className="login-content">
-        {/* Floating Bubbles */}
         <div className="bubbles">
           <div className="bubble"></div>
           <div className="bubble"></div>
@@ -68,14 +67,14 @@ const Login: React.FC = () => {
           <IonText className="login-header">Welcome, User!</IonText>
           <IonGrid>
             <IonRow className="ion-justify-content-center">
-              <IonCol size="auto">
-                <IonButton fill="outline" className="socials">
+              <IonCol size="12" sizeMd="7">
+                <IonButton fill="outline" expand="block" className="social-btn">
                   <IonIcon slot="start" icon={logoGoogle} />
                   Google
                 </IonButton>
               </IonCol>
-              <IonCol size="auto">
-                <IonButton fill="outline" className="socials">
+              <IonCol size="12" sizeMd="7">
+                <IonButton fill="outline" expand="block" className="social-btn">
                   <IonIcon slot="start" icon={logoFacebook} />
                   Facebook
                 </IonButton>
@@ -102,17 +101,17 @@ const Login: React.FC = () => {
               onIonChange={e => setPassword(e.detail.value!)}
             />
           </IonItem>
-
+        <br/>
           <div className="options">
             <IonCheckbox
               checked={rememberMe}
               className="remember-me"
-              onIonChange={e => setRememberMe(e.detail.checked!)}
+              onIonChange={e => setRememberMe(e.detail.checked)}
             />
             Remember Me
             <IonText className="forgot-password">Forgot Password</IonText>
           </div>
-
+          <br/>
           <IonButton expand="block" className="login-btn" onClick={handleLogin}>
             {loading ? <IonSpinner name="crescent" /> : "Sign In"}
           </IonButton>
